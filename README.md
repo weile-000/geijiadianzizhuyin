@@ -4,9 +4,10 @@
 
 ## 在线访问
 
-本应用已部署到GitHub Pages，可通过以下链接访问：
+你可以通过以下链接访问在线版本：
+[https://你的GitHub用户名.github.io/geijiadianzizhuyin/](https://你的GitHub用户名.github.io/geijiadianzizhuyin/)
 
-[新建路小学汉字拼音练习生成器](https://你的用户名.github.io/geijiadianzizhuyin/)
+> 注意：请将链接中的"你的GitHub用户名"替换为你实际的GitHub用户名
 
 ## 功能特点
 
@@ -20,7 +21,6 @@
 
 - **自定义配置**：可调整田字格大小、页边距、显示样式等
 - **一键导出PDF**：高质量PDF文件导出，适合打印
-- **自定义字体**：支持上传自定义字体，增强显示效果
 
 ## 技术栈
 
@@ -61,3 +61,7 @@ npm run build
 - 关闭页眉页脚
 - 对于低年级学生建议使用大号田字格(25mm)
 - 对于中高年级学生可使用中号(20mm)或小号(15mm)田字格
+
+## 部署到GitHub Pages
+
+本项目已配置GitHub Actions自动部署流程。当你推送代码到main分支时，会自动构建和部署到GitHub Pages。
