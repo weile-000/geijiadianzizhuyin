@@ -2,12 +2,9 @@
 
 一个基于Vue 3的网站应用，用于生成汉字拼音练习PDF文档，可打印成纸质版使用。
 
-## 在线访问
+## 在线使用
 
-你可以通过以下链接访问在线版本：
-[https://你的GitHub用户名.github.io/geijiadianzizhuyin/](https://你的GitHub用户名.github.io/geijiadianzizhuyin/)
-
-> 注意：请将链接中的"你的GitHub用户名"替换为你实际的GitHub用户名
+访问GitHub Pages上的应用：[新建路小学汉字拼音练习生成器](https://weile-000.github.io/geijiadianzizhuyin/)
 
 ## 功能特点
 
@@ -61,7 +58,3 @@ npm run build
 - 关闭页眉页脚
 - 对于低年级学生建议使用大号田字格(25mm)
 - 对于中高年级学生可使用中号(20mm)或小号(15mm)田字格
-
-## 部署到GitHub Pages
-
-本项目已配置GitHub Actions自动部署流程。当你推送代码到main分支时，会自动构建和部署到GitHub Pages。
