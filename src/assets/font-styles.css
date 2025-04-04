@@ -1,0 +1,64 @@
+/* 字体渲染优化 */
+
+/* 基本字体平滑设置 */
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  text-rendering: optimizeLegibility;
+}
+
+/* 汉字字体显示优化 */
+.character-font-optimized {
+  text-rendering: optimizeSpeed;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  font-display: block;
+  font-synthesis: none;
+}
+
+/* 拼音字体显示优化 */
+.pinyin-font-optimized {
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  font-display: block;
+}
+
+/* 自定义字体渲染监视 */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Chrome/Safari优化 */
+  .character-font-optimized {
+    -webkit-text-stroke: 0.1px;
+  }
+  
+  /* 防止薄字体在Windows上显示过细 */
+  .pinyin-font-optimized {
+    -webkit-text-stroke: 0.25px;
+  }
+}
+
+/* 确保字体CSS加载状态可监控 */
+.fonts-loaded body {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease-in;
+}
+
+/* 字体加载指示器 */
+.font-loading-indicator {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* 字体切换过渡效果，防止闪烁 */
+.smooth-font-transition {
+  transition: font-family 0.1s ease-out;
+} 
