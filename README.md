@@ -2,10 +2,6 @@
 
 一个基于Vue 3的网站应用，用于生成汉字拼音练习PDF文档，可打印成纸质版使用。
 
-## 在线使用
-
-访问GitHub Pages上的应用：[新建路小学汉字拼音练习生成器](https://weile-000.github.io/geijiadianzizhuyin/)
-
 ## 功能特点
 
 - **A4纸格式预览**：所见即所得的A4页面展示
@@ -18,6 +14,10 @@
 
 - **自定义配置**：可调整田字格大小、页边距、显示样式等
 - **一键导出PDF**：高质量PDF文件导出，适合打印
+
+## 在线使用
+
+访问 GitHub Pages 部署版本：[新建路小学汉字拼音练习生成器](https://weile-000.github.io/geijiadianzizhuyin/)
 
 ## 技术栈
 
@@ -41,6 +41,14 @@ npm run dev
 # 构建生产版本
 npm run build
 ```
+
+## GitHub Pages 部署
+
+项目已配置 GitHub Actions 自动部署到 GitHub Pages：
+
+1. 将代码推送到 GitHub 仓库的 main 分支
+2. GitHub Actions 会自动构建项目并部署到 GitHub Pages
+3. 部署完成后，可通过 https://weile-000.github.io/geijiadianzizhuyin/ 访问
 
 ## 使用方法
 
