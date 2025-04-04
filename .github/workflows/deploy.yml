@@ -19,40 +19,33 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-      
-      - name: Install dependencies
+
+      # 安装依赖
+      - name: Install Dependencies
         run: npm ci
-      
+        
+      # 构建项目
       - name: Build
         run: npm run build
-      
-      - name: Create .nojekyll file
-        run: |
-          touch dist/.nojekyll
-          echo "Creating .nojekyll file to bypass Jekyll processing"
-      
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        
+      # 确保.nojekyll文件存在
+      - name: Create .nojekyll File
+        run: touch dist/.nojekyll
+        
+      # 部署到 GitHub Pages
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: './dist'
-      
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4 
+          folder: dist
+          branch: gh-pages
+          clean: true 
