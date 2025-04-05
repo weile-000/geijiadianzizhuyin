@@ -1,13 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/geijiadianzizhuyin/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>新建路小学汉字拼音练习生成器</title>
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="description" content="汉字拼音练习生成器，提供米字格练习模板和PDF导出功能" />
+    <!-- 预加载常用字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- 确保打印友好 -->
+    <style>
+      @media print {
+        @page {
+          size: A4;
+          margin: 1cm;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/geijiadianzizhuyin/src/main.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html> 
